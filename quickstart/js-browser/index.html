@@ -81,7 +81,6 @@
 
     document.addEventListener("DOMContentLoaded", function () {
       startRecognizeAsyncButton = document.getElementById("startRecognizeAsyncButton");
-
       subscriptionKey = document.getElementById("subscriptionKey");
       regionKey = document.getElementById("regionKey");
       phraseDiv = document.getElementById("phraseDiv");
@@ -108,24 +107,20 @@
 
         recognizer.recognizeAsync(
           function (result) {
+            startRecognizeAsyncButton.disabled = false;
+            phraseDiv.innerHTML += result.text;
             window.console.log(result);
 
-            phraseDiv.innerHTML += result.text;
-
             recognizer.close();
             recognizer = undefined;
-
-            startRecognizeAsyncButton.disabled = false;
           },
           function (err) {
-            window.console.log(err);
-
+            startRecognizeAsyncButton.disabled = false;
             phraseDiv.innerHTML += err;
+            window.console.log(err);
 
             recognizer.close();
             recognizer = undefined;
-
-            startRecognizeAsyncButton.disabled = false;
           });
       });
 
