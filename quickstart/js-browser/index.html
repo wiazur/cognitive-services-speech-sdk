@@ -44,12 +44,9 @@
   <!-- <authorizationfunction> -->
   <!-- SpeechSDK Authorization token -->
   <script>
-  // Note: if you want to use a token source,
-  //       replace the URL with a valid endpoint to retrieve
-  //       authorization tokens for your subscription or leave
-  //       undefined to use your subscription key.
+  // Note: Replace the URL with a valid endpoint to retrieve
+  //       authorization tokens for your subscription.
   var authorizationEndpoint = "token.php";
-  var authorizationToken;
 
   function RequestAuthorizationToken() {
     if (authorizationEndpoint) {
@@ -78,6 +75,7 @@
 
     // subscription key and region key for speech services.
     var subscriptionKey, regionKey;
+    var authorizationToken;
     var SpeechSDK;
     var recognizer;
 
