@@ -17,12 +17,14 @@ proguard-rules.pro text
 *.h text
 *.html text
 *.java text
+*.m text
 *.md text
 *.php text
 *.pl text
 *.prefs text
 *.properties text
 *.sln text
+*.storyboard text
 *.vcxproj text
 *.vcxproj.filters text
 *.xaml text
