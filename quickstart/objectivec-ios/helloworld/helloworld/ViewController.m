@@ -5,7 +5,7 @@
 
 // <code>
 #import "ViewController.h"
-#import "speechapi.h"
+#import <MicrosoftCognitiveServicesSpeech/speechapi.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *recognizeButton;
