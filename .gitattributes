@@ -19,6 +19,7 @@ proguard-rules.pro text
 *.json text
 *.m text
 *.md text
+*.php text
 *.pl text
 *.plist text
 *.prefs text
